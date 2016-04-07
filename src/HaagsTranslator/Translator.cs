@@ -69,7 +69,6 @@ namespace HaagsTranslator
       new []{ "(W|w)eekend", "$1iekend" },
       new []{ "(W|w)ork", "$1urrek" },
       new []{"(B|b)ibliotheek", "$1iebeleteik" },
-      new []{ "cadeau", "kado" },
       new []{ "(F|f)ood", "$1oet"},
       new []{ "doe je het", "doejenut"},
       new []{ "\\bsee\\b", "sie"}, // van 'must see'
@@ -97,7 +96,7 @@ namespace HaagsTranslator
       new []{ "\\b(T|t)our\\b", "$1oeâh"},
       new []{ "diner\\b", "dinei"},
       new []{ "(B|b)oul", "$1oel"}, // 'boulevard'
-      new []{ "(au|ou)(?!v)", "âh" }, // 'oud', geen 'souvenirs'
+      new []{ "(?<![e])(au|ou)(?!v)", "âh" }, // 'oud', geen 'souvenirs', 'cadeau'
       new []{ "aci", "assi"}, // 'racist'
       new []{ "als een", "assun"}, // 'als een'
       new []{ "a(t|l) ik", "a$1$1ik"}, // val ik, at ik
@@ -144,6 +143,7 @@ namespace HaagsTranslator
       new []{ "bote", "baute"}, // 'boterham'
       new []{"(B|b)roc", "$1rauc" }, // 'brochure'
       new []{ "bt\\b", "b"}, // 'hebt'
+      new []{ "\\bca", "ka"}, // 'cadeau'
       new []{ "cc", "ks"}, // 'accenten'
       new []{ "chique", "sjieke" },
       new []{"chure", "sjure" }, // 'brochure'
@@ -165,6 +165,7 @@ namespace HaagsTranslator
       new []{"\\b(B|b)ied\\b", "$1iedt" }, // uitzondering, moet na '-dt'
       
       new []{ "(D|d)y", "$1i"}, // dynamiek
+      new []{ "eau\\b", "o" }, // 'cadeau', 'niveau'
       new []{ "eaa", "eiaa"}, // 'ideaal'
       new []{ "ègen", "ège" }, // 'eigentijds', moet voor 'ee'
       new []{ "Eig", "Èg" }, // 'Eigenlijk', moet voor 'ee'
@@ -454,7 +455,8 @@ namespace HaagsTranslator
 
       //quick fixups
       new [] { "stgong>", "strong>"}, //fixups for <strong tag>
-      new [] { "kute;", "cute;" } // fixups for &eacute; tag
+      new [] { "kute;", "cute;" }, // fixups for &eacute; tag
+      new [] { "&ksedil;", "&ccedil;" } // fixups for &ccedil; tag
     };
 
     /// <summary>
