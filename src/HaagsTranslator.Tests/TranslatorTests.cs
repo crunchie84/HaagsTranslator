@@ -77,7 +77,7 @@ namespace HaagsTranslator.Tests
     [TestCase("Zal ik even het behang van je knars aftrekken.", "Zallik eive ut behang vajje knags aftrekkûh.")]
     [TestCase("Van zo'n bakje koffie krijg ik huisje boompje beestje in m'n koppie", "Van zaun bakkie koffie krèg ik hùissie baumpie beissie imme koppie")]
     [TestCase("Ken ik, ken u, ken jij, als u, mag het, aan het, van het, ik dacht het, van jou, kijk dan", "Kennik, kennu, kejjèh, assu, maggut, annut, vannut, dachut, vajjâh, kèktan")]
-    [TestCase("Gaat het niet lekker dan loop je met je ziel onder je hart gestoken ", "Gaat-ie nie lekkâh dan laupie mejje ziel ondâh je hagt gestauke ")]
+    [TestCase("Gaat het niet lekker dan loop je met je ziel onder je hart gestoken ", "Gaat-ie nie lekkâh dan lauppie mejje ziel ondâh je hagt gestauke ")]
     [TestCase("M'n been slaapt, vind je het erg als ik er even bij ga liggen?", "Me bein slaap, vijje ut errag as ik d'r eive bè ga leggûh?")]
     [TestCase("Waar ligt madurodam nou? Die heb ik dacht ik in de kast neergelegd.", "Waah leg meduraudam nâh? Die heppik dach ik in de kas neâhgeleige.")]
     [TestCase("Kan het zijn dat ik u ken? kunnen", "Ken ut zèn dattik u ken? kenne")]
@@ -97,7 +97,7 @@ namespace HaagsTranslator.Tests
     [TestCase("Niet-westerse dans Toneel Poppentheater lezing Show beurs workshop events Locaties", "Niet westagse dans Tauneil Poppetheijatâh leizing Sjow beuâhs wurreksjop ievents Laukasies")]
     [TestCase("Strand & Buiten Concerten Shoppen Excursies Dit weekend Vandaag Advertentie Reserveer nu", "Stgand & Bùitûh Konsegte Sjoppûh Ekskugsies Dit wiekend Vedaag Advâhtensie Reisâhveâh nâh")]
     [TestCase("Data & tickets Tentoonstellingen Extra informatie must see Privacy policy", "Data & tikkets Tetaunstellinge Ekstra infoâhmasie mus-sie Praaivesie pollesie")]
-    [TestCase("Kun je VVV-informatiepunten stadswandelingen eindelijk per ter bied informatiebrochures prof professor ", "Kajje VVV-infoâhmasiepunte staswandelinge èndelijk peâh teâh biedt infoâhmasiebrausjures prof praufessor ")]
+    [TestCase("Kun je VVV-informatiepunten stadswandelingen eindelijk per ter bied informatiebrochures prof professor ", "Kajje VVV-infoâhmasiepunte staswandelinge èndelijk peâh teâh biedt infoâhmasiebrausjures prof praufessôh ")]
     [TestCase("souvenirs cadeau vervoersbewijzen bibliotheek touchscreen actuele Palace medewerkers werkdagen ", "soevenieâhs kado vevoeâhsbewèze biebeleteik tatskrien akteweile Pellus meidewerrekâhs werrekdage ")]
     [TestCase("Gevers gevestigd kunt Herenstraat aankomsthal airport Airport vele gele waarin speciale begeleiding Telefonische ", "Geivâhs gevestag ken Herestraat ankompshal èâhpogt Èâhpogt veile geile waarin speiciale begelèding Telefauniese ")]
     [TestCase("voorjaarsvakantie Nederland Favorite koninklijke event evenementen internationale januari februari ", "voâhjaahsvekansie Neidâhland Favverietûh kauninklijke ievent eivenemente intâhnasjaunale jannewarie feibruwarie ")]
@@ -112,7 +112,8 @@ namespace HaagsTranslator.Tests
     [TestCase("bospaddenstoelen saus uitwaaien roots bezoekerscentrum strandseizoen plezierig dertig beach verder parkeervergunning vertegenwoordiger tussenletter broer automatiek", "bospaddestoele sâhs ùitwaaie roets bezoekâhscentrum stgandsèzoen plezieâhrag deâhtag bietsj veâhdahs pagkeâhvegunning veteigewoâhdegâh tusselettâh broeâh âhtaumatiek")]
     [TestCase("cultuurschatten übergezellige dieren vooral teams theatervoorstellingen wandelen kenmerken karakteristieke kleding supermarktjes Eten koffietentjes Zeeheldenkwartier borrelen", "kultuâhschatte übâhgezellage diere voâhal tiems theijatâhvoâhstellinge wandele kenmerreke karaktâhristieke kleiding supâhmarrekkies Eite koffietentjes Zeiheldekwagtieâh borrele")]
     [TestCase("dagvers gehele algoritme beginselen hen goedkeuring euro bijbehorende ontworpen stuks levendige Omdat nou", "dagvegs geheile algauritme beginsele hen goedkeuâhring euâhro bèbehoâhrende ontworrepe stuks leivendege Omdat nâh")]
-    [TestCase("Kijkduin Zuiderstrand genieten periode bedenken niveau bureau", "Kèkdùin Zùidâhstgand geniete periaude bedenke nivo buro")]
+    [TestCase("Kijkduin Zuiderstrand genieten periode bedenken niveau bureau scherp kankerstad kankerhoer ben je verveling komkommertijd beter humor", "Kèkdùin Zùidâhstgand geniete periaude bedenke nivo buro scherrep kankâhstad kankâhhoeâh bejje veveiling komkommâhtèd beitâh humôh")]
+    [TestCase("hoofddoek kankerduindorpers versierd herfstdepressie stop je porsie", "haufdoek kankâhdùindorrepâhs vesieâhd herrefsdepressie stoppie pogsie")]
     public void Given_Dutch_Translates_To_Haags(string dutch, string expectedTranslation)
     {
       var result = Translator.Translate(dutch);

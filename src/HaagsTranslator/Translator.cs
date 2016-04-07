@@ -123,6 +123,7 @@ namespace HaagsTranslator
       new []{ "\\b(M|m)et je\\b", "$1ejje"},
       new []{ "\\b(V|v)ind je\\b", "$1ijje"},
       new []{ "\\bmij het\\b", "mènnut"},
+      new []{ "\\b(B|b)en je\\b", "$1ejje"},
 
       new []{ "\\b(A|a)ls er\\b", "$1stâh"},
       new []{ "\\b(K|k)(u|a)n j(e|ij) er\\b", "$1ejjedâh"}, // 'ken je er'
@@ -182,7 +183,7 @@ namespace HaagsTranslator
       new []{ " een ",    " un "},
       new []{ "Een ", "Un "},
       new []{ " eens", " 'ns"}, // 'eens'
-      new []{ "(?<![eo])erd\\b", "egd"}, // 'werd', geen 'verkeerd', 'gefeliciteerd', 'beroerd
+      new []{ "(?<![ieo])erd\\b", "egd"}, // 'werd', geen 'verkeerd', 'gefeliciteerd', 'beroerd', 'versierd'
       new []{ "eerd", "eâhd"}, // 'verkeerd'
       new []{ "(?<![k])ee(d|f|g|k|l|m|n|p|s|t)", "ei$1"}, // 'bierfeest', 'kreeg', 'greep', geen 'keeper'
       new []{ "(?<![èijhm])ds(?![eè])", "s" }, // moet na 'ee','godsdienstige', 'gebedsdienst', geen 'ahdste', 'beroemdste', 'eigentijds', 'weidsheid', 'reeds', 'strandseizoen'
@@ -203,7 +204,8 @@ namespace HaagsTranslator
       new []{ "(?<![etv])(e|E)rg(?!ez)", "$1rreg"}, // 'kermis', 'ergens', geen 'achtergelaten', 'neergelegd', 'overgebleven', 'ubergezellige'
       new []{"ber(?![eoiuâè])", "bâh"}, // 'ubergezellige', moet na '-erg'
       new []{"(G|g)eve(r|n)", "$1eive$2" }, // 'Gevers', moet voor '-ers', geen 'gevestigd'
-      new []{ "(?<![eo ])ers(?![. ,c])", "egs"}, // 'diverse', 'versie', geen klinkers, geen 'eerste', geen 'verscheen'
+      new []{ "([Vv])ersierd", "$1esierd"}, // 'versierd'
+      new []{ "(?<![epko ])ers(?![. ,c])", "egs"}, // 'diverse', 'versie', geen klinkers, geen 'eerste', geen 'verscheen', 'kankerstad', 'duindorpers'
       new []{ "Vers\\b", "Vegs"}, // 'vers', moet voor -ers}
       new []{ "(?<![ei])vers\\b", "vegs"}, // 'vers', moet voor -ers, geen 'Gevers'
       new []{ "renstr", "restr" }, // 'herenstraat' (voor koppelwoorden)
@@ -248,7 +250,8 @@ namespace HaagsTranslator
       new []{ "(E|e)x(c|k)", "$1ksk" }, // 'excursies'
       new []{ "(?<![ s])teri", "tâhri" }, // 'karakteristieke'
       new []{ "(?<![ sS])ter(?![aeirn])", "tâh"}, // 'achtergesteld', geen 'beluisteren', 'literatuur', 'sterren', 'externe', 'sterker', 'karakteristieke'
-      new []{"feli", "feili" }, // 'gefeliciteerd'
+      new []{ "feli", "feili" }, // 'gefeliciteerd'
+      new []{ "fdd", "fd" }, // 'hoofddoek'
       new []{ "(I|i)ndeli", "$1ndeili" }, // 'indeling', geen 'eindelijk', 'wandelingen'
       new []{ "(f|p)t\\b", "$1"}, // 'blijft', 'betrapt'
       new []{ "\\b(N|n)iet\\b", "$1ie" }, // 'niet', geen 'geniet'
@@ -260,9 +263,11 @@ namespace HaagsTranslator
       new []{ "go(r)", "gau$1" }, // 'algoritme'
       new []{ "gelegd\\b", "geleige"}, // 'neergelegd'
       new []{ "([HhVvr])ee(l|n|t)", "$1ei$2"}, // 'verscheen', 'veel', 'overeenkomsten', 'heet'
-      new []{"(H|h)er(?![e])", "$1eâh" }, // 'herzien', geen 'herenstraat'
+      new []{"(H|h)er(?![efp])", "$1eâh" }, // 'herzien', geen 'herenstraat', 'scherp', 'herfstdepressie'
+      new []{ "(?<![ei])er(f|p)", "erre$1" }, // 'scherp', 'herfstdepressie', geen 'bierfeest'
       new []{ "(I|i)n het", "$1nnut"}, // 'in het'
       new []{ "\\b(E|e)te", "$1ite"}, // 'eten'
+      new []{ "(?<![i])etâ", "eitâ" }, // 'beter'
       new []{ "(?<![ir])ete(?![i])", "eite" }, // 'hete', 'gegeten', geen 'bibliotheek','erretensoep', 'koffietentjes', 'genieten
       new []{ "(d|h|l|m|r|t)ea(?![m])", "$1eija" }, // 'theater', geen 'team'
       new []{ "\\bhet\\b", "ut"},
@@ -297,7 +302,7 @@ namespace HaagsTranslator
       new []{ "(?<![gr])ties\\b", "sies"}, // 'tradities', moet voor -isch, geen 'smarties'
       new []{ "isch(|e)", "ies$1"},
       new []{ "is er", "istâh"},
-      new []{ "(p) je\\b", "$1ie" }, // 'loop je'
+      new []{ "p je\\b", "ppie" }, // 'loop je', 'stoppie'
       new []{ "(g|k) je\\b", "$1$1ie" }, // 'zoek je'
       new []{ "jene", "jenei"}, // 'jenever'
       new []{ "jezelf", "je ège"}, // "jezelf"
@@ -310,6 +315,7 @@ namespace HaagsTranslator
       new []{ "(K|k)unt", "$1en" },
       new []{ "(K|k)led", "$1leid"}, // 'kleding'
       new []{ "orf", "orref" },
+      new []{ "(?<![o])ors", "ogs" }, // 'porsie'
       new []{ "oro(?![eo])", "orau" }, // 'Corona'
       new []{ "Oo([igkm])", "Au$1" }, // 'ook' 
       new []{ "oo([difgklmnpst])",         "au$1"}, // 'hoog', 'dood'
@@ -345,6 +351,7 @@ namespace HaagsTranslator
       new []{ "\\b(N|n)u\\b", "$1âh"},
       new []{ "ny", "ni" }, // 'hieronymus' 
       new []{ "\\bmad", "med"}, // 'madurodam'
+      new []{ "(?<![o])or\\b", "ôh"}, // 'humor'
       new []{ "oer\\b", "oeâh"}, // 'broer'
       new []{ "oer(?![aieou])", "oeâh"}, // 'beroerd', 'hoer', geen 'toerist', 'stoere
       new []{ "oeder", "oedâhr" }, // 'bloederigste'
@@ -376,6 +383,8 @@ namespace HaagsTranslator
       new []{ "der(?![eianrouèt])", "dâh"},// 'moderne'/'moderrene', geen 'dertig'
       new []{ "\\b(P|p|T|t)er\\b", "$1eâh" }, // 'per', 'ter'
       new []{ "(?<![ io])er\\b", "âh" }, // 'kanker', geen 'hoer', 'er', 'per', 'hier' , moet voor 'over' na o(v)(e)
+      new []{ "ker(d|h)", "kâh$1" }, // 'kankerhoer', 'kankerduindorpers'
+      new []{ "mertè", "mâhtè" }, // 'komkommertijd'
       new []{ "(P|p)er(?!i)", "$1âh"}, // 'supermarkt', geen 'periode', moet na 'per'
       new []{ "(P| p)o(^st)" , "$1au$2"}, // 'poltici'
       new []{ "p ik\\b", "ppik"}, // 'hep ik'
@@ -431,6 +440,7 @@ namespace HaagsTranslator
       new []{ "vaka", "veka" }, // 'vakantie' 
       new []{ "vard\\b", "vâh"}, // 'boulevard'
       new []{"\\b(V|v)ege", "$1eige"}, // 'vegetarisch'
+      new []{ "veli", "veili" }, // 'verveling'
       new []{ "voetbal", "foebal"},
       new []{ "we er ", "we d'r "}, // 'we er'
       new []{ "\\ber\\b", "d'r"},
